@@ -1,0 +1,191 @@
+/* --- Root Variables --- */
+:root {
+  --glam-pink: #ff5c8d;
+  --soft-pink: #ff8c94;
+  --nude-bg: #f8f1f1;
+  --white: #ffffff;
+  --glass: rgba(255, 92, 141, 0.2);
+}
+
+/* --- General Reset --- */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--nude-bg);
+  font-family: 'Poppins', sans-serif;
+  color: #444;
+}
+
+/* --- Main Container & Pink Border --- */
+.container {
+  margin: 40px auto;
+  max-width: 1100px;
+  border: 10px solid var(--white);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background-color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  border: 2px solid #f0a7a7;
+  border-radius: 25px;
+  z-index: -1;
+}
+
+/* --- Banner Section --- */
+.banner {
+  position: relative;
+  height: 650px;       /* Banner height */
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.slideshow-container, .slide, .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide img {
+  filter: brightness(0.7);
+}
+
+/* --- Banner Overlay (Luxury + Pink Glass) --- */
+.banner-overlay {
+  position: absolute;      /* Absolute inside banner */
+  bottom: 50px;            /* Distance from bottom of banner */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 80%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 25px 30px;
+  background: rgba(255, 92, 141, 0.2);
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+
+.banner-overlay h1 {
+  font-size: clamp(28px, 5vw, 48px);
+  font-family: 'Playfair Display', serif;
+  color: white;
+  margin-top: 300px;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.5);
+}
+
+.banner-overlay p {
+  font-size: 1.1rem;
+  color: var(--white);
+  margin: 0;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+}
+
+/* --- Buttons --- */
+.button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.book-now {
+  background-color: var(--glam-pink);
+  color: var(--white);
+  padding: 15px 35px;
+  border-radius: 50px;
+}
+
+.book-now:hover {
+  background-color: var(--soft-pink);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 92, 141, 0.4);
+}
+
+/* --- Booking Form Section --- */
+.booking-form-section {
+  padding: 60px 20px;
+  background: var(--white);
+  text-align: center;
+}
+
+.booking-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.booking-form h2 {
+  text-align: center;
+  color: var(--glam-pink);
+  margin-bottom: 30px;
+}
+
+.booking-form label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.booking-form select,
+.booking-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  background: #fafafa;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: var(--soft-pink);
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-content p {
+  color: white;
+  margin: 0;
+}
+
+.social-media a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* --- Slideshow Fade Animation --- */
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}

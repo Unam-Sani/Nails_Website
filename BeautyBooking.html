@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lashed by Sihle | Luxury Beauty</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+
+    <!-- Hero Banner Section -->
+    <section class="banner" aria-label="Featured beauty services">
+      <div class="slideshow-container">
+
+        <div class="slide fade">
+          <img src="Images/Slideshow Image 1.jpg" alt="Luxury eyelash extensions">
+        </div>
+
+        <div class="slide fade">
+          <img src="Images/Slideshow Image 2.jpg" alt="Professional nail art design">
+        </div>
+
+        <div class="slide fade">
+          <img src="Images/Slideshow Image 8.jpg" alt="Lash and nail beauty treatment">
+        </div>
+
+        <!-- Slideshow Controls -->
+        <button class="prev" aria-label="Previous slide" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" aria-label="Next slide" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+
+      <!-- Banner Overlay -->
+      <div class="banner-overlay">
+        <h1>Transform your look with Lashed by Sihle</h1>
+        <p>Indulge in beauty. Perfect lashes, gorgeous nails, all in one place.</p>
+        <!--<button class="button book-now" type="button">Book Now</button>-->
+      </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-form-section" aria-labelledby="booking-title">
+      <form class="booking-form">
+        <h2 id="booking-title">Book Your Appointment</h2>
+
+        <div class="form-group">
+          <label for="service">Select Service</label>
+          <select id="service" name="service" required>
+            <option value="">-- Choose a service --</option>
+            <option value="lashes">Eyelash Extensions</option>
+            <option value="nails">Nail Art</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Select Date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+
+        <div class="form-group">
+          <label for="time">Select Time</label>
+          <input type="time" id="time" name="time" required>
+        </div>
+
+        <div class="form-group">
+          <label for="contact">Your Contact Information</label>
+          <input type="text" id="contact" name="contact" placeholder="Your name and phone number" required>
+        </div>
+
+        <button type="submit" class="button book-now">Confirm Booking</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 Lashed by Sihle. All rights reserved.</p>
+        <nav class="social-media" aria-label="Social media links">
+          <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+        </nav>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
